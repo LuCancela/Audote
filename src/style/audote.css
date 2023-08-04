@@ -1,0 +1,65 @@
+.busca {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 100px;
+    flex-shrink: 2;
+    height: 55px;
+}
+
+.pesquisar-input {
+    max-width: 380px;
+    width: 100%;
+    background-color: #f0f0f0;
+    margin-right: 0;
+    height: 100%;
+    border-radius: 20px 0px 0px 20px;
+    display: grid;
+    grid-template-columns: 15% 85%;
+    padding: 20px;
+    position: relative;
+    outline: none;
+  }
+  
+.pesquisar-input i {
+    text-align: center;
+    line-height: 55px;
+    color: #acacac;
+    transition: 0.5s;
+    font-size: 1.1rem;
+  }
+  
+.pesquisar-input{
+    outline: none;
+    border: none;
+    line-height: 1;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #333;
+  }
+  
+.pesquisar-input::placeholder{
+    color: #aaa;
+    font-weight: 500;
+}
+
+.busca .botao-pesquisar {
+    width: 100px;
+    height: inherit;
+}
+
+
+.botao-pesquisar button {
+    width: 100%;
+    height: inherit;
+    border: none;
+    border-radius: 0px 20px 20px 0;
+    background-color: #333;
+    color: #f0f0f0;
+    transition: 1s;
+}
+
+.botao-pesquisar button:hover {
+    opacity: 80%;
+}
+  

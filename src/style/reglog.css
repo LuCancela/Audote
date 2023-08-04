@@ -1,3 +1,4 @@
+/* Estilos gerais */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
 
 * {
@@ -7,13 +8,10 @@
 }
 
 body {
-  padding-top: 60px;
-}
-
-body,
-input {
   font-family: "Poppins", sans-serif;
 }
+
+/* Estilo da seção dos formulários de login e cadastro */
 
 .container {
   position: relative;
@@ -96,7 +94,7 @@ form.sign-in-form {
   font-size: 1.1rem;
 }
 
-.input-field input {
+.input-field input, .input-field select {
   background: none;
   outline: none;
   border: none;
@@ -106,44 +104,19 @@ form.sign-in-form {
   color: #333;
 }
 
-.input-field input::placeholder {
+.input-field input::placeholder, .input-field select {
   color: #aaa;
   font-weight: 500;
 }
 
-.social-text {
-  padding: 0.7rem 0;
-  font-size: 1rem;
-}
-
-.social-media {
-  display: flex;
-  justify-content: center;
-}
-
-.social-icon {
-  height: 46px;
-  width: 46px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 0.45rem;
+.input-field select {
   color: #333;
-  border-radius: 50%;
-  border: 1px solid #333;
-  text-decoration: none;
-  font-size: 1.1rem;
-  transition: 0.3s;
-}
-
-.social-icon:hover {
-  color: #4481eb;
-  border-color: #4481eb;
+  font-weight: 600;
 }
 
 .btn {
   width: 150px;
-  background-color: #5995fd;
+  background-color: #dd51bc;
   border: none;
   outline: none;
   height: 49px;
@@ -157,7 +130,7 @@ form.sign-in-form {
 }
 
 .btn:hover {
-  background-color: #4d84e2;
+  background-color: #7a166f;
 }
 .panels-container {
   position: absolute;
@@ -177,7 +150,8 @@ form.sign-in-form {
   top: -10%;
   right: 48%;
   transform: translateY(-50%);
-  background-image: linear-gradient(-45deg, #ee41ee 0%, #6e215e 100%);
+  background-image: linear-gradient(-45deg, #FF71DE 0%, #dd51bc
+  100%);
   transition: 1.8s ease-in-out;
   border-radius: 50%;
   z-index: 6;
@@ -241,7 +215,7 @@ form.sign-in-form {
   transform: translateX(800px);
 }
 
-/* ANIMATION */
+/* ANIMAÇÃO */
 
 .container.sign-up-mode:before {
   transform: translate(100%, -50%);
@@ -279,7 +253,7 @@ form.sign-in-form {
 .container.sign-up-mode .right-panel {
   pointer-events: all;
 }
-
+/* Ajuste para telas de no máximo 870px */
 @media (max-width: 870px) {
   .container {
     min-height: 800px;
@@ -382,7 +356,7 @@ form.sign-in-form {
     transform: translate(-50%, 0);
   }
 }
-
+/* ajuste para telas de no máximo 570px */
 @media (max-width: 570px) {
   form {
     padding: 0 1.5rem;
@@ -435,6 +409,56 @@ form.sign-in-form {
   display: block;
 }
 
-.esqueci p a{
+a.esqueci{
+  color: #333;
+}
+
+.voltar{
+  position: absolute;
+  z-index: 99999;
+  bottom: 20px;
+  right: 20px;
+  background-color: #333;
+  padding: 15px;
+  border-radius: 20px;
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  transition: 1s;
+}
+
+.voltar a {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
   text-decoration: none;
+  color: #fff;
+}
+
+.voltar .fa-angle-left {
+  font-size: 2rem;
+}
+
+.voltar a h4 {
+  width: 280px;
+}
+
+.voltar:hover {
+  width: 330px;
+}
+
+.esqueci-senha {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.esqueci-senha .successo {
+  color: rgb(65, 209, 46);
+  text-align: center;
+  font-weight: 700;
 }
